@@ -1,0 +1,123 @@
+/* 🌌 Space Themed Background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('../images/stars-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ✅ Main Quiz Box */
+#quizBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  width: 90%;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  animation: zoomFade 1s ease-in-out;
+}
+
+/* 🪐 Title */
+h1 {
+  font-size: 36px;
+  color: #ffd700;
+  text-shadow: 0 0 20px #ffd700aa;
+  margin-bottom: 30px;
+  animation: slideDown 1s ease;
+}
+
+/* 🛰️ Question */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  animation: fadeIn 0.6s ease;
+}
+
+/* 🟢 Answer Buttons */
+.answer-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  margin: 10px;
+  font-size: 18px;
+  border: none;
+  background-color: #2d6cdf;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.answer-btn:hover {
+  background-color: #1b4fb8;
+  transform: scale(1.07);
+  box-shadow: 0 0 18px #4ea1ff;
+}
+
+/* ✅ Answer Feedback */
+.answer-btn.correct {
+  background-color: #00e676 !important;
+  color: white;
+  box-shadow: 0 0 22px #00e676;
+}
+
+.answer-btn.wrong {
+  background-color: #ff1744 !important;
+  color: white;
+  box-shadow: 0 0 22px #ff1744;
+}
+
+/* 🔁 Next Button */
+#nextBtn {
+  display: none;
+  margin-top: 25px;
+  padding: 14px 30px;
+  font-size: 18px;
+  background-color: #ffa500;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #ff9900;
+  transition: all 0.3s ease;
+}
+
+#nextBtn:hover {
+  background-color: #ff8c00;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff9900aa;
+}
+
+/* 🎉 Correct/Wrong Popup */
+@keyframes fadePopup {
+  0% { opacity: 0; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1.15); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+/* Animations */
+@keyframes zoomFade {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
