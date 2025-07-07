@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enter Details - SpaceCraft</title>
+  <link rel="stylesheet" href="css/form.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h1>👨‍🚀 Space Traveler Details</h1>
+
+    <form id="spaceForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" required />
+
+      <label for="planet">Planet You Live On:</label>
+      <select id="planet" required>
+        <option value="">--Select--</option>
+        <option>Earth</option>
+        <option>Mars</option>
+        <option>Venus</option>
+        <option>Jupiter</option>
+        <option>Neptune</option>
+      </select>
+
+      <button type="submit">Start Mission 🚀</button>
+    </form>
+  </div>
+
+  <script src="js/form.js"></script>
+</body>
+</html>
